@@ -7,6 +7,7 @@
     "reactide-server": "webpack-dev-server --config reactide.config.js --mode development --hot"
   },
   "dependencies": {
+    "@directus/sdk": "^9.2.1",
     "axios": "^0.24.0",
     "next": "latest",
     "react": "^17.0.2",
@@ -15,25 +16,26 @@
     "swr": "^1.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.7.0",
-    "html-webpack-plugin": "^3.2.0",
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0-beta.0",
+    "@types/react": "^17.0.37",
+    "autoprefixer": "^10.2.6",
     "babel-loader": "^8.0.0-beta.0",
     "css-loader": "^2.1.1",
     "file-loader": "^4.0.0",
-    "node-sass": "^4.12.0",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss": "^8.3.5",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "url-loader": "^2.0.0"
+    "tailwindcss": "^2.2.4",
+    "typescript": "^4.5.2",
+    "url-loader": "^2.0.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.7.0"
   }
 }
