@@ -1,15 +1,15 @@
 import { Directus, ID } from '@directus/sdk';
 import { useEffect, useState } from 'react';
 
+
+const sdk = new Directus<Collections>(process.env.API_BASEURL);
+
 type Member = {
   id: ID;
 }
-
 type Collections = {
   Member: Member;
 }
-
-const sdk = new Directus<Collections>(process.env.API_BASEURL);
 
 export default function Mitglied() {
   const [data, setData] = useState([]);

@@ -1,5 +1,8 @@
 module.exports = {
-  images: {
-    domains: ["randomuser.me"],
+  env: {
+    API_BASEURL: 'http://localhost:8055',
   },
+  images: {
+    domains: ['localhost', 'cms.augustuspflege.de'],
+  }
 };
