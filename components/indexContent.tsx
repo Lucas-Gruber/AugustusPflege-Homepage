@@ -10,11 +10,12 @@ export default function indexContent() {
               Über<span className="italic font-normal"> Schrift </span>
             </h1>
             <p role="contentinfo" className="pr-12 mt-8 text-base leading-6 text-gray-600 focus:outline-none 2xl:pr-24 xl:pr-0">
-              Das alles ist wirklich kein grund, um ihr geliebtes Zuhause zu verlassen.
-              Lehnen Sie sich zurück.
-              Lassen sie es zu, das wir Sie durch den Herbst des Lebens begleiten.
-              Sie bleiben in ihrem sozialen Umfeld und müssen nicht mit neuen Situationen belastet werden.
-              Sprechen Sie uns an, wir nehmen uns Zeit und beraten Sie und Ihre Angehörigen gerne.
+                Wohnen ist ein Lebensbereich mit essentieller Bedeutung für alle Menschen - gleichzeitig ein Grundbedürfnis alltäglichen Lebens.
+                Unsere Wohnverhältnisse sind entscheidend, ob es uns gut geht und ob wir uns wohl fühlen.
+                Im Alter allerdings wird die Wohnung immer mehr zum Lebensmittelpunkt.
+                Wenn ihre Hände nicht mehr so geschickt sind wie früher, Ihr Beine Sie nicht mehr tragen wollen,
+                Ihre Sehkraft nachlässt und die Erinnerung an früher verblassen beginnt, dann weicht die Jugend dem Alter.
+              
             </p>
               <div className="mt-10">
                 <button className="flex items-center p-1 text-xl font-medium leading-5 text-gray-800 md:p-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
@@ -33,11 +34,11 @@ export default function indexContent() {
             </div>
             <div className="w-full xl:w-4/6 md:w-1/2 xl:pl-48">
               <p role="contentinfo" className="mt-10 mb-8 text-base leading-6 text-gray-600 focus:outline-none md:mt-0">
-                Wohnen ist ein Lebensbereich mit essentieller Bedeutung für alle Menschen - gleichzeitig ein Grundbedürfnis alltäglichen Lebens.
-                Unsere Wohnverhältnisse sind entscheidend, ob es uns gut geht und ob wir uns wohl fühlen.
-                Im Alter allerdings wird die Wohnung immer mehr zum Lebensmittelpunkt.
-                Wenn ihre Hände nicht mehr so geschickt sind wie früher, Ihr Beine Sie nicht mehr tragen wollen,
-                Ihre Sehkraft nachlässt und die Erinnerung an früher verblassen beginnt, dann weicht die Jugend dem Alter.
+              Das alles ist wirklich kein grund, um ihr geliebtes Zuhause zu verlassen.
+              Lehnen Sie sich zurück.
+              Lassen sie es zu, das wir Sie durch den Herbst des Lebens begleiten.
+              Sie bleiben in ihrem sozialen Umfeld und müssen nicht mit neuen Situationen belastet werden.
+              Sprechen Sie uns an, wir nehmen uns Zeit und beraten Sie und Ihre Angehörigen gerne.
               </p>
             <div className="w-full">
               <Image src={process.env.API_BASEURL + "/assets/3667a915-da36-4294-8ed8-826309c86ccc"} alt="Hände Bild" width="1280" height="853" className="object-cover w-full md:w-full sm:w-1/2" />

@@ -1,8 +1,9 @@
 module.exports = {
   env: {
-    API_BASEURL: 'http://localhost:8055',
+    API_BASEURL: 'http://192.168.178.23:8055',
+    IMG_BASEURL: 'http://192.168.178.23:8055/assets/',
   },
   images: {
-    domains: ['localhost', 'cms.augustuspflege.de'],
+    domains: ['localhost', 'cms.augustuspflege.de', '192.168.178.23'],
   }
 };
