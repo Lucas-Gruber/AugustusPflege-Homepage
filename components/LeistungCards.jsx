@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import Image from "next/image";
 import { ListArrowIcon } from "./Icons";
 import { LeistungsCardLoading } from "./Loadings";
 
@@ -14,11 +14,14 @@ function LeistungsCard(props) {
   return (
     <div className="relative w-full h-full p-5 bg-white rounded-md shadow-lg">
       <span>
-        <img
-          className="p-2 mb-5 bg-gray-200 rounded-full"
+        <div className="p-2 mb-5 bg-gray-200 rounded-full w-9 h-9">
+        <Image
           src="https://i.ibb.co/HFC1hqn/people-1.png"
-          alt="home-1"
+          alt="Services-Icon"
+          width={20}
+          height={20}
         />
+        </div>
       </span>
       <h1 className="pb-4 text-2xl font-semibold">
         { props.title }
