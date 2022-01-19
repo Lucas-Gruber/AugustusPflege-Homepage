@@ -1,7 +1,7 @@
 function StaffCard(props) {
   return (
     <div className="flex flex-col items-center p-4 text-center">
-      <img src={ process.env.IMG_BASEURL + props.potrait } alt="" className="rounded-full h-28 w-28" />
+      <img src={ process.env.IMG_BASEURL + props.potrait } alt="" className="rounded-full w-28 h-28 mb-1.5" />
       <p>{ props.name }</p>
       <p className="text-sm text-green-500">{ props.stelle }</p>
     </div>

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>AugustusPflege - Home</title>
       </Head>
 
       <Hero />

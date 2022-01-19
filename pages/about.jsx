@@ -1,29 +1,52 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Banner from '../components/Banner';
-import Content from '../components/indexContent';
-import Image from 'next/image';
-import { Directus, ID } from '@directus/sdk';
-import { useEffect, useState } from 'react';
 import { StaffCard, StaffCardBig } from '../components/StaffCard';
-import { StaffCardLoading, TextLoading } from '../components/Loadings';
+const { gql, useQuery } = require("@apollo/client");
+import { client } from "./_app";
 
-const sdk = new Directus<Collections>(process.env.API_BASEURL);
+export async function getStaticProps() {
+  const { data: staffData } = await client.query({
+    query: gql`
+      query Staff {
+        mitarbeiter (
+          filter: { status: { _eq: "published" } }
+        ) {
+          id
+          status
+          name
+          stelle
+          potrait {
+            id
+          }
+        }
+      }
+    `,
+  });
 
-type Mitarbeiter = {
-  id: ID;
-  name: string;
-  stelle: string;
-  potrait: string;
-}
-type About = {
-  id: ID;
-  uber_uns: string;
-  unser_ziel: string;
-}
-type Collections = {
-  Member: Mitarbeiter;
-  About: About;
+  const { data: aboutData } = await client.query({
+    query: gql`
+      query Staff {
+        about{
+          id
+          uber_uns
+          unser_ziel
+        }
+      }
+    `,
+  });
+
+  if (!staffData || !aboutData) {
+    return {
+      notFound: true,
+    }
+  }
+  
+  return {
+    props: {
+      staff: await staffData.mitarbeiter,
+      about: await aboutData.about,
+    },
+    revalidate: 60
+ };
 }
 
 const fuehrung = [
@@ -33,37 +56,7 @@ const fuehrung = [
   { name: 'Pepper', stelle: 'Seniorenbegleithund', potrait: '73aa053d-ee67-4848-8598-a654328d66ee', potrait2: '9c7a83b4-8193-4a80-bb52-04e46c4f7da0' },
 ]
 
-export default function Home() {
-  const [mitarbeiterData, setMitarbeiterData] = useState([]);
-  const [textData, setTextData] = useState({});
-  const [isMitarbeiterLoading, setIsMitarbeiterLoading] = useState(false);
-  const [isTextLoading, setIsTextLoading] = useState(false);
-
-  useEffect(() => {
-    setIsTextLoading(true);
-    setIsMitarbeiterLoading(true);
-    async function fetch() {
-      await sdk.auth.login({
-        email: process.env.API_LOGIN_EMAIL,
-        password: process.env.API_LOGIN_PASS,
-      });
-      const rest = (await sdk.singleton("about").read());
-      const res = (await sdk.items("mitarbeiter").readMany()).data;
-
-      setTimeout(() => {
-        setIsTextLoading(false);
-        setTextData(rest);
-      }, 2000)
-
-      setTimeout(() => {
-        setIsMitarbeiterLoading(false);
-        setMitarbeiterData(res);
-      }, 2000)
-    }
-    
-    fetch();
-  }, []);
-
+export default function Home({ staff, about }) {
   return (
     <div className="">
       <Head>
@@ -74,19 +67,17 @@ export default function Home() {
             <div className="flex flex-col justify-between gap-8 lg:flex-row">
                 <div className="flex flex-col justify-center w-full lg:w-5/12">
                     <h1 className="pb-4 text-3xl font-bold leading-9 text-gray-800 lg:text-4xl">Über Uns</h1>
-                    {/* @ts-ignore */}
-                    { isTextLoading ? (<TextLoading />) : (<div className="text-base font-normal leading-6 text-gray-600" dangerouslySetInnerHTML={ {__html: textData.uber_uns} }></div>) }
+                    <div className="text-base font-normal leading-6 text-gray-600" dangerouslySetInnerHTML={ {__html: about.uber_uns} }></div>
                 </div>
                 <div className="w-full lg:w-8/12 ">
                     <img className="object-scale-down w-full h-full" src={ process.env.IMG_BASEURL + "53525fb2-9ee6-41aa-9989-9d79ecb0b5b5" } alt="A group of People" />
                 </div>
             </div>
 
-            <div className="flex flex-col justify-between gap-8 pt-12 lg:flex-row">
+            <div className="flex flex-col justify-between gap-8 pt-10 lg:flex-row">
                 <div className="flex flex-col justify-center w-full lg:w-5/12">
                     <h1 className="pb-4 text-3xl font-bold leading-9 text-gray-800 lg:text-4xl">Unser Ziel</h1>
-                    {/* @ts-ignore */}
-                    { isTextLoading ? (<TextLoading />) : (<div className="text-base font-normal leading-6 text-gray-600" dangerouslySetInnerHTML={ {__html: textData.unser_ziel} }></div>) }
+                    <div className="text-base font-normal leading-6 text-gray-600" dangerouslySetInnerHTML={ {__html: about.unser_ziel} }></div>
                 </div>
                 <div className="w-full lg:w-8/12 lg:pt-8">
                     <h1 className="pb-4 text-3xl font-bold leading-9 text-center text-gray-800 lg:text-4xl">Unser Team</h1>
@@ -95,14 +86,13 @@ export default function Home() {
                           <StaffCardBig key={ data.name } potrait={ data.potrait } potrait2={ data.potrait2 } name={ data.name } stelle={ data.stelle } />
                         ))}
 
-                        { isMitarbeiterLoading ? ( <StaffCardLoading /> ) : ''}
-                        {mitarbeiterData.map((data) => (
-                          <StaffCard key={ data.id } potrait={ data.potrait } name={ data.name } stelle={ data.stelle } />
+                        {staff.map((staff) => (
+                          <StaffCard key={ staff.id } potrait={ staff.potrait.id } name={ staff.name } stelle={ staff.stelle } />
                         ))}
                     </div>
                 </div>
             </div>
         </div>
       </div>
-  ); 
+  );
 }

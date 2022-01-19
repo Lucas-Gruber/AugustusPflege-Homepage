@@ -77,7 +77,7 @@ export default function Hero() {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src={ process.env.IMG_BASEURL + "3667a915-da36-4294-8ed8-826309c86ccc" }
+          src={ process.env.IMG_BASEURL + "c4623551-ea8b-4b71-90df-30e5b9170b04" }
           alt=""
         />
       </div>

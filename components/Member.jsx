@@ -4,14 +4,7 @@ import { useEffect, useState } from 'react';
 
 const sdk = new Directus<Collections>(process.env.API_BASEURL);
 
-type Member = {
-  id: ID;
-}
-type Collections = {
-  Member: Member;
-}
-
-export default function Mitglied() {
+export default function Mitglieds() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -29,7 +22,6 @@ export default function Mitglied() {
 
   return(
     <>
-      { isLoading ? <p>loading...</p> : ''}
       {data.map((data) => (
         <p key={ data.id }>{ data.member_name }</p>
       ))}
