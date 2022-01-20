@@ -1,23 +1,23 @@
 import Head from "next/head";
-import { useState } from "react";
-import LeistungCards from '../components/LeistungCards';
+import JobCards from '../components/JobCards';
 const { gql, useQuery } = require("@apollo/client");
 import { client } from "./_app";
 
 export async function getStaticProps() {
-  const { data: servicesData } = await client.query({
+  const { data: jobsData } = await client.query({
     query: gql`
       query Services {
-        Leistungen {
+        stellen {
           id
           titel
-          leistungen
+          aufgaben
+          beschreibung
         }
       }
     `,
   });
 
-  if (!servicesData) {
+  if (!jobsData) {
     return {
       notFound: true,
     }
@@ -25,24 +25,25 @@ export async function getStaticProps() {
   
   return {
     props: {
-      services: await servicesData.Leistungen,
+      jobs: await jobsData.stellen,
     },
     revalidate: 60
  };
 }
 
-export default function leistungen({ services }) {
+const jobs = ({jobs}) => {
+  console.log(jobs);
   return (
     <div role="article" className="py-9 md:px-8">
       <Head>
-        <title>AugustusPflege - Leistungen</title>
+        <title>AugustusPflege - Stellenangebote</title>
       </Head>
       <div className="px-4 py-10 xl:px-0">
         <div className="flex flex-col flex-wrap lg:flex-row">
           <div className="mt-4 lg:mt-0 lg:w-3/5">
             <div>
               <h1 className="ml-2 text-3xl font-bold tracking-normal text-gray-900 lg:ml-0 lg:text-4xl lg:w-11/12">
-                Leistungen
+                Stellenangebote
               </h1>
             </div>
           </div>
@@ -50,9 +51,11 @@ export default function leistungen({ services }) {
       </div>
       <div className="px-6 xl:px-0">
         <div className="grid gap-8 pb-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          <LeistungCards data={services} />
+          <JobCards data={jobs} />
         </div>
       </div>
     </div>
-  );
+  )
 }
+
+export default jobs;
