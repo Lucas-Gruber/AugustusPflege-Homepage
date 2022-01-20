@@ -1,12 +1,16 @@
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Layout({ children }) {
   return (
     <>
       <Navbar />
+      
       <div className="mx-auto 2xl:container">
         {children}
       </div>
+
+      <Footer />
     </>
   )
 }
