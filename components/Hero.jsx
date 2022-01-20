@@ -79,7 +79,7 @@ export default function Hero() {
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <Image
-          src={process.env.IMG_BASEURL + "c4623551-ea8b-4b71-90df-30e5b9170b04"}
+          src={process.env.NEXT_PUBLIC_IMG_BASEURL + "c4623551-ea8b-4b71-90df-30e5b9170b04"}
           className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
           layout="fill"
         />

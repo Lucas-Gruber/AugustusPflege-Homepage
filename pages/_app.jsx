@@ -9,7 +9,7 @@ import {
 } from "@apollo/client";
 
 export const client = new ApolloClient({
-  uri: process.env.API_BASEURL + '/graphql?access_token=hhjhjfhjwfjhjfwhjhwhjfehjfwjhjfehjhfwjh',
+  uri: process.env.API_URL + '/graphql?access_token=' + process.env.API_TOKEN,
   cache: new InMemoryCache()
 });
 

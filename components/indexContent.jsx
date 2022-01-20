@@ -41,7 +41,7 @@ export default function indexContent() {
               Sprechen Sie uns an, wir nehmen uns Zeit und beraten Sie und Ihre Angehörigen gerne.
               </p>
             <div className="w-full">
-              <Image src={process.env.API_BASEURL + "/assets/3667a915-da36-4294-8ed8-826309c86ccc"} alt="Hände Bild" width="1280" height="853" className="object-cover w-full md:w-full sm:w-1/2" />
+              <Image src={process.env.NEXT_PUBLIC_IMG_BASEURL + "3667a915-da36-4294-8ed8-826309c86ccc"} alt="Hände Bild" width="1280" height="853" className="object-cover w-full md:w-full sm:w-1/2" />
               <div className="flex items-center mt-8">
                 <p role="contentinfo" className="text-xl font-semibold leading-5 text-gray-700 focus:outline-none">
                   Bild Desc

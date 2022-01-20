@@ -4,7 +4,7 @@ function StaffCard(props) {
   return (
     <div className="flex flex-col items-center p-4 text-center">
       <Image
-        src={process.env.IMG_BASEURL + props.potrait}
+        src={process.env.NEXT_PUBLIC_IMG_BASEURL + props.potrait}
         alt={props.name + " Potrait"}
         width={112}
         height={112}
@@ -22,7 +22,7 @@ function StaffCardBig(props) {
       <div className="hidden md:block">
         <Image
           className="rounded"
-          src={process.env.IMG_BASEURL + props.potrait}
+          src={process.env.NEXT_PUBLIC_IMG_BASEURL + props.potrait}
           alt={props.name + "Bild1"}
           width={162}
           height={186}
@@ -31,7 +31,7 @@ function StaffCardBig(props) {
       <div className="block md:hidden">
         <Image
           className="rounded"
-          src={process.env.IMG_BASEURL + props.potrait2}
+          src={process.env.NEXT_PUBLIC_IMG_BASEURL + props.potrait2}
           alt={props.name + "Bild2"}
           width={311}
           height={186}

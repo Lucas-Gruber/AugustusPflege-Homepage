@@ -71,7 +71,7 @@ export default function Home({ staff, about }) {
                     <div className="text-base font-normal leading-6 text-gray-600" dangerouslySetInnerHTML={ {__html: about.uber_uns} }></div>
                 </div>
                 <div className="flex items-center w-full lg:w-8/12">
-                  <Image className="object-scale-down w-full h-full" width={1900} height={680} src={ process.env.IMG_BASEURL + "53525fb2-9ee6-41aa-9989-9d79ecb0b5b5" } alt="" />
+                  <Image className="object-scale-down w-full h-full" width={1900} height={680} src={ process.env.NEXT_PUBLIC_IMG_BASEURL + "53525fb2-9ee6-41aa-9989-9d79ecb0b5b5" } alt="" />
                     
                 </div>
             </div>

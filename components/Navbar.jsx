@@ -41,7 +41,7 @@ export default function Navbar() {
                   <div className="block lg:hidden">
                     <Image
                       src={
-                        process.env.IMG_BASEURL +
+                        process.env.NEXT_PUBLIC_IMG_BASEURL +
                         "c326267f-3858-49dd-a98a-7d0eb485a875"
                       }
                       alt="AugustusPflege Logo"
@@ -53,7 +53,7 @@ export default function Navbar() {
                   <div className="hidden pt-1 lg:block">
                     <Image
                       src={
-                        process.env.IMG_BASEURL +
+                        process.env.NEXT_PUBLIC_IMG_BASEURL +
                         "68c48ec4-f3da-4f5d-bfd0-b7126449050b"
                       }
                       alt="AugustusPflege Schriftzug"
