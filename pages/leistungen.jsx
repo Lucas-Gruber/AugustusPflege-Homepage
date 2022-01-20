@@ -33,11 +33,11 @@ export async function getStaticProps() {
 
 export default function leistungen({ services }) {
   return (
-    <div role="article" className="py-9 md:px-8">
+    <div role="article" className="lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 2xl:container 2xl:mx-auto">
       <Head>
         <title>AugustusPflege - Leistungen</title>
       </Head>
-      <div className="px-4 py-10 xl:px-0">
+      <div className="px-4 pb-4 xl:px-0">
         <div className="flex flex-col flex-wrap lg:flex-row">
           <div className="mt-4 lg:mt-0 lg:w-3/5">
             <div>
