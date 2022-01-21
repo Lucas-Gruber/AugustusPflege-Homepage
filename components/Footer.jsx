@@ -50,7 +50,7 @@ const Footer = () => {
             <p>Tel.: 0821 / 906 76 411</p>
             <p>Fax.: 0821 / 906 76 413</p>
             <br />
-            <br />
+            <br className="hidden sm:block" />
             <p>
               Email:{" "}
               <a href="mailto:augustuspflege@web.de" className="text-yellow-500">augustuspflege@web.de</a>
