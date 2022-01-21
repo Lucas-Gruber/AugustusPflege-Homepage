@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <>
       <Navbar />
       
-      <div className="min-h-screen mx-auto 2xl:container">
+      <div className="min-h-screen mx-auto ">
         {children}
       </div>
 
