@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 import Navbar from '../components/Navbar';
-const Footer = lazy(() => import('../components/Footer'));
+import Footer from '../components/Footer';
 
 
 export default function Layout({ children }) {
