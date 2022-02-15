@@ -82,6 +82,7 @@ export default function Hero() {
           src={process.env.NEXT_PUBLIC_IMG_BASEURL + "c4623551-ea8b-4b71-90df-30e5b9170b04"}
           className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
           layout="fill"
+          alt='Hero Image "Oma und Opa"'
         />
       </div>
     </div>
