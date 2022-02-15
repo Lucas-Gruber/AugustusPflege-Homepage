@@ -84,6 +84,21 @@ class MyDocument extends Document {
 
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
           <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+          <meta name ="title" content ="Augustus Pflege"/>
+          <meta name ="description" content ="Augustus Pflege ist ein Ambulanter Pflegedienst in Augsburg"/>
+          <meta name ="copyright" content ="Augustus Pflege / Lucas Gruber"/>
+          <meta name ="keywords" content ="augustuspflege,augustus,pflege,pflegedienst,amublant"/>
+          <meta property ="og:type" content ="website"/>
+          <meta property ="og:url" content ="https://augustuspflege.de"/>
+          <meta property ="og:title" content ="Augustus Pflege"/>
+          <meta property ="og:description" content ="Augustus Pflege ist ein Ambulanter Pflegedienst in Augsburg"/>
+          <meta property ="og:image" content ="https://metaseo.itsvg.in/404.svg"/>
+          <meta property ="twitter:card" content ="summary_large_image"/>
+          <meta property ="twitter:url" content ="https://augustuspflege.de"/>
+          <meta property ="twitter:title" content ="Augustus Pflege"/>
+          <meta property ="twitter:description" content ="Augustus Pflege ist ein Ambulanter Pflegedienst in Augsburg"/>
+          <meta property ="twitter:image" content ="https://metaseo.itsvg.in/404.svg"/>
+
         </Head>
         <body className="text-black">
           <Main />
