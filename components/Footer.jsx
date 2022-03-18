@@ -26,7 +26,12 @@ const Footer = () => {
             <p>Schreiben sie uns</p>
             <p>
               Email:{" "}
-              <a href="mailto:augustuspflege@web.de" className="text-yellow-500">augustuspflege@web.de</a>
+              <a
+                href="mailto:augustuspflege@web.de"
+                className="text-yellow-500"
+              >
+                augustuspflege@web.de
+              </a>
             </p>
           </div>
         </div>
@@ -38,7 +43,7 @@ const Footer = () => {
             <iframe
               loading="lazy"
               className="h-[120px] w-[188px]"
-              allowfullscreen
+              allowFullScreen
               src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJbUZloJeZnkcR7G3iVg3KT3Q&key=AIzaSyBjNIhs2-TbdJfb5lh_eDAW9CZ4L23KhbM"
             ></iframe>
           </div>
@@ -53,7 +58,12 @@ const Footer = () => {
             <br className="hidden sm:block" />
             <p>
               Email:{" "}
-              <a href="mailto:augustuspflege@web.de" className="text-yellow-500">augustuspflege@web.de</a>
+              <a
+                href="mailto:augustuspflege@web.de"
+                className="text-yellow-500"
+              >
+                augustuspflege@web.de
+              </a>
             </p>
           </div>
         </div>

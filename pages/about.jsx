@@ -52,8 +52,8 @@ const fuehrung = [
   {
     name: "Baier Herbert",
     stelle: "Geschäftsführer",
-    potrait: "e841e03d-1879-4c7b-a851-b152895de92d",
-    potrait2: "1fc24048-f49c-4ad1-bc0b-ec3e73ccbd8e",
+    potrait: "8bcbef25-ca51-4db0-8b17-a5e667c8952c",
+    potrait2: "0d69e20d-3429-4497-8831-bba96e2bb31d",
   },
   {
     name: "Gruber Christian",
@@ -61,17 +61,23 @@ const fuehrung = [
     potrait: "5811593b-e634-4dab-af9e-57e99c4c4c01",
     potrait2: "2f3abb2b-21b4-471a-8f90-bed3ec12fb06",
   },
-  {
-    name: "Theresa",
-    stelle: "Stellv. PDL",
-    potrait: "bf6b363b-67b2-4c52-bc45-25d793c13d6b",
-    potrait2: "f4bd3d1b-c733-4d1f-8d21-56eadead95c8",
-  },
+  // {
+  //   name: "Theresa",
+  //   stelle: "Stellv. PDL",
+  //   potrait: "bf6b363b-67b2-4c52-bc45-25d793c13d6b",
+  //   potrait2: "f4bd3d1b-c733-4d1f-8d21-56eadead95c8",
+  // },
   {
     name: "Pepper",
     stelle: "Seniorenbegleithund",
-    potrait: "73aa053d-ee67-4848-8598-a654328d66ee",
-    potrait2: "9c7a83b4-8193-4a80-bb52-04e46c4f7da0",
+    potrait: "ba5dd4f0-eacb-4225-b4cb-a018e4332170",
+    potrait2: "6b425d3b-ec38-49d2-b05e-7528846cea84",
+  },
+  {
+    name: "",
+    stelle: "",
+    potrait: "66796dc7-378f-4084-9436-f9d2427745a0",
+    potrait2: "66796dc7-378f-4084-9436-f9d2427745a0",
   },
 ];
 
